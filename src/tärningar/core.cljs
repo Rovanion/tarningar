@@ -35,21 +35,22 @@
 
 (defn some-component []
   [:div
-   [:h1
-    [:button {:on-click #(swap! state update :antal-tärningar dec)} "-"]
-    " " (:antal-tärningar @state) " "
-    [:button {:on-click #(swap! state update :antal-tärningar inc)} "+"]]
-   [:button {:on-click kastknappstryck}
-    "Kasta tärningar"]
+   [:header
+    [:h1
+     [:button {:on-click #(swap! state update :antal-tärningar dec)} "-"]
+     " " (:antal-tärningar @state) " "
+     [:button {:on-click #(swap! state update :antal-tärningar inc)} "+"]]
+    [:button {:on-click kastknappstryck}
+     "Kasta tärningar"]]
    [:div.dices
     (for [[index tärning] (map-indexed list (:tärningar @state))]
       [:span.dice {:key index} (num->tärningstecken tärning)])]])
 
-(defn mountit []
+(defn mount []
   (rd/render [some-component]
              (.-body js/document)))
 
-(mountit)
+(mount)
 
 (defn ^:after-load on-reload []
-  (mountit))
+  (mount))

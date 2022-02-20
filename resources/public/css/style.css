@@ -1,8 +1,30 @@
+header {
+	margin-top: 5vh;
+	text-align: center;
+}
+button {
+	margin: 0 4px;
+	padding: 8px 12px;
+	font-size: 16px;
+	vertical-align: text-bottom;
+	background: white;
+	border: 1px solid lightgrey;
+	border-radius: 6px;
+	box-shadow: 2px 2px 5px -4px;
+	cursor: pointer;
+}
+button:hover {
+	background: black;
+}
 .dices {
 	display: flex;
 	flex-wrap: wrap;
+	margin: 28px 5vw 0 5vw;
 }
 .dice {
 	font-size: 128px;
+	user-select: none;
 	line-height: 100px;
+	flex-grow: 1;
+	text-align: center;
 }
