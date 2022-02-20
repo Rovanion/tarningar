@@ -1,4 +1,4 @@
-(ns ^:figwheel-hooks tärningar.core
+(ns ^:figwheel-hooks tarningar.core
   (:require
    [goog.dom     :as gdom]
    [reagent.core :as r  :refer [atom]]
