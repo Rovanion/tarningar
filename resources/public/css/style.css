@@ -1,0 +1,8 @@
+.dices {
+	display: flex;
+	flex-wrap: wrap;
+}
+.dice {
+	font-size: 128px;
+	line-height: 100px;
+}
