@@ -14,7 +14,8 @@ button {
 	cursor: pointer;
 }
 button:hover {
-	background: black;
+	background: darkgrey;
+	color: white;
 }
 .dices {
 	display: flex;
