@@ -21,7 +21,7 @@
 
 (defn kastknappstryck
   [knapp]
-  (swap! state #(assoc % :tärningar (kasta-d6-obegränsad (:antal-tärningar @state)))))
+  (swap! state assoc :tärningar (kasta-d6-obegränsad (:antal-tärningar @state))))
 
 (defn num->tärningstecken
   [number]
