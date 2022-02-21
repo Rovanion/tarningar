@@ -1,6 +1,6 @@
-(ns tärningar.core-test
+(ns tarningar.core-test
     (:require
      [cljs.test :refer-macros [deftest is testing]]
-     [tärningar.core :as t]))
+     [tarningar.core :as t]))
 
 (deftest multiply-test)
