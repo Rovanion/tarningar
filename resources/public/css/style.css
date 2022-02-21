@@ -1,6 +1,10 @@
 header {
+	display: flex;
 	margin-top: 5vh;
 	text-align: center;
+}
+header > div {
+	flex-grow: 1;
 }
 button {
 	margin: 0 4px;
@@ -10,12 +14,18 @@ button {
 	background: white;
 	border: 1px solid lightgrey;
 	border-radius: 6px;
-	box-shadow: 2px 2px 5px -4px;
+	box-shadow: 2px 2px 6px -4px;
 	cursor: pointer;
 }
 button:hover {
-	background: darkgrey;
+	background: #888;
 	color: white;
+}
+button:active {
+	background: #333;
+}
+label {
+	font-family: sans-serif;
 }
 .dices {
 	display: flex;
