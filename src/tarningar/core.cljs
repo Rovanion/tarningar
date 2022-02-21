@@ -36,15 +36,15 @@
 (defn some-component []
   [:div
    [:header
+    [:div [:label "Summa"]
+          [:h1 (reduce + (:tärningar @state))]]
     [:div
      [:h1
       [:button {:on-click #(swap! state update :antal-tärningar dec)} "-"]
       " " (:antal-tärningar @state) " "
       [:button {:on-click #(swap! state update :antal-tärningar inc)} "+"]]
      [:button {:on-click kastknappstryck}
-      "Kasta tärningar"]]
-    [:div [:label "Summa"]
-          [:h1 (reduce + (:tärningar @state))]]]
+      "Kasta tärningar"]]]
    [:div.dices
     (for [[index tärning] (map-indexed list (:tärningar @state))]
       [:span.dice {:key index} (num->tärningstecken tärning)])]])
